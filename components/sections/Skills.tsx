@@ -53,25 +53,25 @@ export function Skills() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.4 }}
-                        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8"
+                        className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 md:gap-10"
                     >
                         {SKILLS[activeTab as keyof typeof SKILLS].map((skill) => (
                             <motion.div
                                 key={skill.name}
-                                className="flex flex-col items-center gap-4 p-4 transition-all duration-300 group"
+                                className="flex flex-col items-center justify-center gap-3 transition-all duration-300"
                             >
                                 <motion.div
-                                    whileHover={{ scale: 1.25, y: -10 }}
-                                    transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                                    className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-transparent group-hover:drop-shadow-[0_0_20px_rgba(236,72,153,0.3)] dark:group-hover:drop-shadow-[0_0_20px_rgba(236,72,153,0.5)]"
+                                    whileHover={{ scale: 1.15, y: -5 }}
+                                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                    className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-transparent"
                                 >
                                     <img
                                         src={skill.icon}
                                         alt={skill.name}
-                                        className="w-full h-full object-contain grayscale-[0.6] group-hover:grayscale-0 transition-all duration-500"
+                                        className="w-full h-full object-contain"
                                     />
                                 </motion.div>
-                                <p className="font-medium text-sm md:text-base text-muted-foreground group-hover:text-foreground transition-colors text-center">
+                                <p className="font-medium text-[10px] md:text-xs text-muted-foreground text-center">
                                     {skill.name}
                                 </p>
                             </motion.div>

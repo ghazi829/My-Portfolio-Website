@@ -26,7 +26,7 @@ export function Footer() {
         <footer className="relative py-12 border-t border-border/50 bg-background/50 backdrop-blur-sm">
             <div className="section-container flex flex-col items-center justify-center gap-6">
 
-                {/* Animated Character / Icon */}
+                {/* Animated Profile Image */}
                 <motion.div
                     animate={{
                         y: [0, -10, 0],
@@ -36,10 +36,16 @@ export function Footer() {
                         repeat: Infinity,
                         ease: "easeInOut"
                     }}
-                    className="relative w-16 h-16 flex items-center justify-center rounded-full bg-blue-100/50 dark:bg-blue-900/20"
+                    className="relative w-16 h-16 flex items-center justify-center rounded-full overflow-hidden border-2 border-primary/20"
                 >
-                    {/* Replace this with an actual running cat GIF/Image if desired */}
-                    <Cat className="w-8 h-8 text-blue-500" />
+                    <img
+                        src="/profile.jpg"
+                        alt={PERSONAL_INFO.name}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                            e.currentTarget.src = "https://github.com/ghazi829.png";
+                        }}
+                    />
                 </motion.div>
 
                 {/* Copyright */}

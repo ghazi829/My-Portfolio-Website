@@ -104,7 +104,7 @@ export function Hero() {
                     </motion.div>
 
                     {/* Social Links */}
-                    <motion.div
+                    {/* <motion.div
                         variants={item}
                         className="flex justify-center gap-6"
                     >
@@ -123,7 +123,7 @@ export function Hero() {
                                 </a>
                             );
                         })}
-                    </motion.div>
+                    </motion.div> */}
                 </motion.div>
             </div>
 

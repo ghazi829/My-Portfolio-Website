@@ -11,7 +11,15 @@ export interface Project {
 
 export interface Skill {
     name: string;
-    category: "frontend" | "backend" | "database" | "tools";
+    icon: string;
+}
+
+export interface SkillsData {
+    frontend: Skill[];
+    backend: Skill[];
+    database: Skill[];
+    realtime: Skill[];
+    devops: Skill[];
 }
 
 export interface Experience {

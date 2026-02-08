@@ -1,4 +1,4 @@
-import { Project, Skill, Experience, Education, Certification, SocialLink } from "@/types";
+import { Project, Skill, Experience, Education, Certification, SocialLink, Testimonial } from "@/types";
 
 // Personal Information
 export const PERSONAL_INFO = {
@@ -217,3 +217,28 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 // Footer
 export const FOOTER_TEXT = "Open to Full Stack Developer roles and opportunities";
+
+// Testimonials
+export const TESTIMONIALS: Testimonial[] = [
+    {
+        id: 1,
+        text: "Ghazi's ability to bridge the gap between abstract design and high-performance engineering is unmatched. He didn't just build our platform; he architected a scalable future for our product.",
+        author: "ALEX THOMPSON",
+        role: "CEO, TECHFLOW SAAS",
+        stars: 5,
+    },
+    {
+        id: 2,
+        text: "Working with Ghazi was a transformative experience for our engineering team. His focus on clean code and cinematic UX brought a level of polish we didn't think was possible.",
+        author: "SARAH CHEN",
+        role: "PRODUCT LEAD, RUNE AI",
+        stars: 5,
+    },
+    {
+        id: 3,
+        text: "The attention to detail in the watch integration and bento layouts is just the tip of the iceberg. Ghazi is a senior engineer who truly understands premium digital craftsmanship.",
+        author: "JAMES WILSON",
+        role: "FOUNDER, ZENITH DIGITAL",
+        stars: 5,
+    },
+];

@@ -53,15 +53,15 @@ export function Skills() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -15 }}
                         transition={{ duration: 0.3 }}
-                        className="flex flex-wrap justify-center gap-x-8 gap-y-10 md:gap-x-12 md:gap-y-12 max-w-4xl mx-auto"
+                        className="flex flex-wrap justify-center gap-x-4 gap-y-6 md:gap-x-8 md:gap-y-10 max-w-3xl mx-auto"
                     >
                         {SKILLS[activeTab as keyof typeof SKILLS]?.map((skill) => (
                             <motion.div
                                 key={skill.name}
-                                className="group flex flex-col items-center justify-center gap-3 transition-all duration-300 w-24 md:w-32"
+                                className="group flex flex-col items-center justify-center gap-3 transition-all duration-300 w-20 md:w-24"
                             >
                                 <motion.div
-                                    whileHover={{ scale: 1.15, y: -5 }}
+                                    whileHover={{ scale: 1.05, y: -2 }}
                                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                                     className="relative w-8 h-8 md:w-11 md:h-11 flex items-center justify-center bg-transparent"
                                 >
@@ -71,7 +71,7 @@ export function Skills() {
                                         className="w-full h-full object-contain mx-auto transition-transform duration-300"
                                     />
                                 </motion.div>
-                                <p className="font-medium text-[10px] md:text-sm text-muted-foreground group-hover:text-foreground group-hover:font-bold transition-all text-center">
+                                <p className="font-medium text-[9px] md:text-xs text-muted-foreground group-hover:text-foreground transition-all duration-300 text-center">
                                     {skill.name}
                                 </p>
                             </motion.div>

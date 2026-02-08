@@ -26,8 +26,8 @@ export function Projects() {
                                 <div className="mb-4">
                                     <span
                                         className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${project.status === "completed"
-                                                ? "bg-green-500/20 text-green-600 dark:text-green-400"
-                                                : "bg-yellow-500/20 text-yellow-600 dark:text-yellow-400"
+                                            ? "bg-green-500/20 text-green-600 dark:text-green-400"
+                                            : "bg-yellow-500/20 text-yellow-600 dark:text-yellow-400"
                                             }`}
                                     >
                                         {project.status === "completed" ? (

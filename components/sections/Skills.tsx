@@ -6,10 +6,10 @@ import { SKILLS } from "@/lib/constants";
 
 const tabs = [
     { key: "frontend", label: "Frontend" },
-    { key: "backend", label: "Backend & API" },
-    { key: "database", label: "Database" },
+    { key: "backend", label: "Backend & Database" },
     { key: "realtime", label: "Real-time" },
     { key: "devops", label: "DevOps" },
+    { key: "ai", label: "AI/ML" },
 ];
 
 export function Skills() {
@@ -19,7 +19,7 @@ export function Skills() {
         <section id="skills" className="py-24">
             {/* Heading */}
             <div className="text-center mb-14">
-                <p className="text-sm tracking-widest text-gray-400 uppercase">
+                <p className="text-sm tracking-widest text-muted-foreground uppercase mb-2">
                     My Skillset
                 </p>
                 <h2 className="text-5xl font-bold">
@@ -28,15 +28,15 @@ export function Skills() {
             </div>
 
             {/* Tabs */}
-            <div className="flex justify-center flex-wrap gap-3 mb-16">
+            <div className="flex justify-center flex-wrap gap-2 md:gap-4 mb-20 px-4">
                 {tabs.map((tab) => (
                     <button
                         key={tab.key}
                         onClick={() => setActiveTab(tab.key)}
-                        className={`px-5 py-2 rounded-full text-sm font-medium transition-all
+                        className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
               ${activeTab === tab.key
-                                ? "bg-black text-white shadow-md"
-                                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                                ? "bg-[#0f172a] text-white shadow-xl scale-105"
+                                : "bg-muted/30 text-muted-foreground hover:bg-muted/50"
                             }`}
                     >
                         {tab.label}
@@ -44,34 +44,34 @@ export function Skills() {
                 ))}
             </div>
 
-            {/* Skills Grid */}
-            <div className="max-w-5xl mx-auto">
+            {/* Skills Container */}
+            <div className="max-w-6xl mx-auto px-4">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={activeTab}
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.4 }}
-                        className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 md:gap-10"
+                        exit={{ opacity: 0, y: -15 }}
+                        transition={{ duration: 0.3 }}
+                        className="flex flex-wrap justify-center gap-x-8 gap-y-10 md:gap-x-12 md:gap-y-12 max-w-4xl mx-auto"
                     >
-                        {SKILLS[activeTab as keyof typeof SKILLS].map((skill) => (
+                        {SKILLS[activeTab as keyof typeof SKILLS]?.map((skill) => (
                             <motion.div
                                 key={skill.name}
-                                className="flex flex-col items-center justify-center gap-3 transition-all duration-300"
+                                className="group flex flex-col items-center justify-center gap-3 transition-all duration-300 w-24 md:w-32"
                             >
                                 <motion.div
                                     whileHover={{ scale: 1.15, y: -5 }}
                                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                                    className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-transparent"
+                                    className="relative w-8 h-8 md:w-11 md:h-11 flex items-center justify-center bg-transparent"
                                 >
                                     <img
                                         src={skill.icon}
                                         alt={skill.name}
-                                        className="w-full h-full object-contain"
+                                        className="w-full h-full object-contain mx-auto transition-transform duration-300"
                                     />
                                 </motion.div>
-                                <p className="font-medium text-[10px] md:text-xs text-muted-foreground text-center">
+                                <p className="font-medium text-[10px] md:text-sm text-muted-foreground group-hover:text-foreground group-hover:font-bold transition-all text-center">
                                     {skill.name}
                                 </p>
                             </motion.div>

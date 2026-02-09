@@ -12,7 +12,8 @@ import {
     Monitor,
     GraduationCap,
     MessageSquare,
-    BadgeCheck
+    BadgeCheck,
+    Send
 } from "lucide-react";
 
 const NAV_ITEMS = [
@@ -23,7 +24,9 @@ const NAV_ITEMS = [
     { name: "Projects", href: "#projects", icon: Monitor },
     { name: "Education", href: "#education", icon: GraduationCap },
     { name: "Certifications", href: "#certifications", icon: BadgeCheck },
-    { name: "Contact", href: "#contact", icon: MessageSquare },
+    { name: "Testimonials", href: "#testimonials", icon: MessageSquare },
+    { name: "Contact", href: "#contact", icon: Send }
+
 ];
 
 export function Navbar() {

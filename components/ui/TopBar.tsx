@@ -1,13 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Globe, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { PERSONAL_INFO, SOCIAL_LINKS } from "@/lib/constants";
 
 const iconMap = {
     github: Github,
     linkedin: Linkedin,
-    globe: Globe,
     email: Mail,
 };
 
@@ -43,7 +42,7 @@ export function TopBar() {
                 {/* Right: Social Icons */}
                 <div className="flex items-center gap-3 sm:gap-4">
                     {SOCIAL_LINKS.map((link) => {
-                        const Icon = iconMap[link.icon as keyof typeof iconMap] || Globe;
+                        const Icon = iconMap[link.icon as keyof typeof iconMap] || Mail;
                         return (
                             <a
                                 key={link.name}

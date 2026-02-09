@@ -2,51 +2,20 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Button } from "@/components/ui/Button";
-import { PERSONAL_INFO, SOCIAL_LINKS } from "@/lib/constants";
-import { Mail, Github, Linkedin, Globe, Instagram, Twitter, Send as Telegram } from "lucide-react";
-import { useState, FormEvent } from "react";
+import { PERSONAL_INFO } from "@/lib/constants";
+import { Mail, Github, Linkedin, Instagram, Twitter, Send as Telegram } from "lucide-react";
+import { useForm, ValidationError } from "@formspree/react";
+import { useEffect, useRef } from "react";
 
 export function Contact() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: "",
-    });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+    const [state, handleSubmit] = useForm("mjgekpon");
+    const formRef = useRef<HTMLFormElement>(null);
 
-    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-
-        try {
-            await new Promise((resolve) => setTimeout(resolve, 1500));
-            console.log("Form submitted:", formData);
-            setSubmitStatus("success");
-
-            setFormData({
-                name: "",
-                email: "",
-                message: "",
-            });
-
-            setTimeout(() => setSubmitStatus("idle"), 3000);
-        } catch (error) {
-            console.error("Form submission error:", error);
-            setSubmitStatus("error");
-            setTimeout(() => setSubmitStatus("idle"), 3000);
-        } finally {
-            setIsSubmitting(false);
+    useEffect(() => {
+        if (state.succeeded && formRef.current) {
+            formRef.current.reset();
         }
-    };
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData((prev) => ({
-            ...prev,
-            [e.target.name]: e.target.value,
-        }));
-    };
+    }, [state.succeeded]);
 
     const contactLinks = [
         { icon: Mail, label: "Email", href: `mailto:${PERSONAL_INFO.email}` },
@@ -59,7 +28,13 @@ export function Contact() {
 
     return (
         <section id="contact" className="section-container bg-muted/30">
-            <SectionHeading>Contact Me</SectionHeading>
+            <SectionHeading
+                subtitle="GET IN TOUCH"
+                showLine={false}
+                className="font-serif italic font-light text-5xl md:text-7xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent "
+            >
+                Contact Me
+            </SectionHeading>
 
             <div className="max-w-6xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-8">
@@ -119,7 +94,7 @@ export function Contact() {
                         transition={{ duration: 0.6 }}
                         className="glass-card p-8 h-full"
                     >
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                             <h3 className="text-xl font-serif mb-8">Send a message</h3>
 
                             {/* Name Field */}
@@ -131,12 +106,11 @@ export function Contact() {
                                     type="text"
                                     id="name"
                                     name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
                                     required
                                     className="w-full px-4 py-3 rounded-lg bg-background/50 border border-border focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-muted-foreground/50 font-light"
                                     placeholder="Your name"
                                 />
+                                <ValidationError prefix="Name" field="name" errors={state.errors} />
                             </div>
 
                             {/* Email Field */}
@@ -148,12 +122,11 @@ export function Contact() {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
                                     required
                                     className="w-full px-4 py-3 rounded-lg bg-background/50 border border-border focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-muted-foreground/50 font-light"
                                     placeholder="you@company.com"
                                 />
+                                <ValidationError prefix="Email" field="email" errors={state.errors} />
                             </div>
 
                             {/* Message Field */}
@@ -164,42 +137,42 @@ export function Contact() {
                                 <textarea
                                     id="message"
                                     name="message"
-                                    value={formData.message}
-                                    onChange={handleChange}
                                     required
                                     rows={6}
                                     className="w-full px-4 py-3 rounded-lg bg-background/50 border border-border focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all resize-none placeholder:text-muted-foreground/50 font-light"
                                     placeholder="Tell me what you're building..."
                                 />
+                                <ValidationError prefix="Message" field="message" errors={state.errors} />
                             </div>
 
-                            {/* Submit Button */}
-                            <button
-                                type="submit"
-                                disabled={isSubmitting}
-                                className="px-8 py-3 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
-                            >
-                                {isSubmitting ? "Sending..." : "Submit"}
-                            </button>
-
-                            {/* Status Messages */}
-                            {submitStatus === "success" && (
-                                <motion.div
-                                    initial={{ opacity: 0, y: -10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    className="p-4 rounded-lg bg-green-500/10 text-green-600 dark:text-green-400 text-sm text-center"
+                            {/* Submit Button & Status */}
+                            <div className="flex items-center gap-4">
+                                <button
+                                    type="submit"
+                                    disabled={state.submitting || state.succeeded}
+                                    className="px-8 py-3 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    Message sent successfully!
-                                </motion.div>
-                            )}
+                                    {state.submitting ? "Sending..." : "Submit"}
+                                </button>
 
-                            {submitStatus === "error" && (
+                                {state.succeeded && (
+                                    <motion.span
+                                        initial={{ opacity: 0, x: -10 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        className="text-muted-foreground/80 text-sm font-light"
+                                    >
+                                        Message sent.
+                                    </motion.span>
+                                )}
+                            </div>
+
+                            {state.errors && (
                                 <motion.div
                                     initial={{ opacity: 0, y: -10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     className="p-4 rounded-lg bg-red-500/10 text-red-600 dark:text-red-400 text-sm text-center"
                                 >
-                                    Failed to send message.
+                                    Failed to send message. Please try again.
                                 </motion.div>
                             )}
                         </form>

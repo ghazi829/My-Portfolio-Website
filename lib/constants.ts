@@ -209,9 +209,9 @@ export const SOCIAL_LINKS: SocialLink[] = [
         icon: "linkedin",
     },
     {
-        name: "Portfolio",
-        url: "https://ghazi829.github.io/My-Portfolio/",
-        icon: "globe",
+        name: "Email",
+        url: `mailto:${PERSONAL_INFO.email}`,
+        icon: "Mail",
     },
 ];
 

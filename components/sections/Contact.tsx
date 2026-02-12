@@ -3,19 +3,30 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PERSONAL_INFO } from "@/lib/constants";
-import { Mail, Github, Linkedin, Instagram, Twitter, Send as Telegram } from "lucide-react";
+import { Mail, Github, Linkedin, Instagram, Twitter, Send as Telegram, X } from "lucide-react";
 import { useForm, ValidationError } from "@formspree/react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 export function Contact() {
     const [state, handleSubmit] = useForm("mjgekpon");
     const formRef = useRef<HTMLFormElement>(null);
+    const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
 
     useEffect(() => {
         if (state.succeeded && formRef.current) {
             formRef.current.reset();
         }
     }, [state.succeeded]);
+
+    // Close modal on escape key
+    useEffect(() => {
+        const handleEsc = (e: KeyboardEvent) => {
+            if (e.key === "Escape") setIsCalendlyOpen(false);
+        };
+        window.addEventListener("keydown", handleEsc);
+        return () => window.removeEventListener("keydown", handleEsc);
+    }, []);
 
     const contactLinks = [
         { icon: Mail, label: "Email", href: `mailto:${PERSONAL_INFO.email}` },
@@ -78,11 +89,12 @@ export function Contact() {
                             </p>
 
                             {/* Book Call Button */}
-                            <a href="#" className="inline-block">
-                                <button className="px-6 py-3 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
-                                    Book a 30-min call
-                                </button>
-                            </a>
+                            <button
+                                onClick={() => setIsCalendlyOpen(true)}
+                                className="px-6 py-3 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity w-fit"
+                            >
+                                Book a 30-min call
+                            </button>
                         </div>
                     </motion.div>
 
@@ -179,6 +191,49 @@ export function Contact() {
                     </motion.div>
                 </div>
             </div>
+
+            {/* Calendly Modal */}
+            <AnimatePresence>
+                {isCalendlyOpen && (
+                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+                        {/* Backdrop */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setIsCalendlyOpen(false)}
+                            className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+                        />
+
+                        {/* Modal Content */}
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                            className="relative w-full max-w-4xl h-[80vh] bg-white rounded-2xl overflow-hidden shadow-2xl"
+                        >
+                            {/* Header */}
+                            <div className="absolute top-4 right-4 z-50">
+                                <button
+                                    onClick={() => setIsCalendlyOpen(false)}
+                                    className="p-2 rounded-full bg-zinc-100 text-zinc-900 hover:bg-zinc-200 transition-colors"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
+
+                            {/* Calendly Iframe */}
+                            <iframe
+                                src="https://calendly.com/khanmpir/30min?embed_domain=yourportfolio.com&embed_type=Inline"
+                                width="100%"
+                                height="100%"
+                                frameBorder="0"
+                                className="w-full h-full"
+                            />
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
         </section>
     );
 }

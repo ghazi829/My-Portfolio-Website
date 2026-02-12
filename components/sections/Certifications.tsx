@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { CERTIFICATIONS } from "@/lib/constants";
-import { Award, Calendar } from "lucide-react";
+import { BadgeCheck, Calendar } from "lucide-react";
+import { Avatar } from "@mui/material";
 
 export function Certifications() {
     return (
@@ -23,9 +24,12 @@ export function Certifications() {
                         <Card className="h-full">
                             <div className="flex items-start gap-4">
                                 <div className="flex-shrink-0">
-                                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center">
-                                        <Award className="w-6 h-6 text-white" />
-                                    </div>
+                                    <Avatar
+                                        className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 shadow-lg"
+                                        sx={{ width: 48, height: 48, borderRadius: "12px" }}
+                                    >
+                                        <BadgeCheck className="w-6 h-6 text-white" />
+                                    </Avatar>
                                 </div>
 
                                 <div className="flex-grow">

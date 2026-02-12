@@ -20,7 +20,6 @@ const NAV_ITEMS = [
     { name: "Home", href: "#hero", icon: Home },
     { name: "About", href: "#about", icon: User },
     { name: "Skills", href: "#skills", icon: Cpu },
-    { name: "Experience", href: "#experience", icon: Briefcase },
     { name: "Projects", href: "#projects", icon: Monitor },
     { name: "Education", href: "#education", icon: GraduationCap },
     { name: "Certifications", href: "#certifications", icon: BadgeCheck },

@@ -29,7 +29,7 @@ const iconMap = {
 export function Hero() {
     return (
         <section
-            id="home"
+            id="hero"
             className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
         >
             {/* Animated Background */}

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 
 const NAV_ITEMS = [
-    { name: "Home", href: "#hero", icon: Home },
+    { name: "Hero", href: "#hero", icon: Home },
     { name: "About", href: "#about", icon: User },
     { name: "Skills", href: "#skills", icon: Cpu },
     { name: "Projects", href: "#projects", icon: Monitor },
@@ -30,6 +30,7 @@ const NAV_ITEMS = [
 
 export function Navbar() {
     const [activeSection, setActiveSection] = useState("hero");
+    const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
     useEffect(() => {
         // Scroll active detection
@@ -80,32 +81,55 @@ export function Navbar() {
 
                 {NAV_ITEMS.map((item) => {
                     const isActive = activeSection === item.href.substring(1);
+                    const isHovered = hoveredItem === item.name;
+
                     return (
-                        <a
+                        <motion.a
                             key={item.name}
                             href={item.href}
                             onClick={(e) => scrollToSection(e, item.href)}
+                            onMouseEnter={() => setHoveredItem(item.name)}
+                            onMouseLeave={() => setHoveredItem(null)}
+                            whileTap={{ scale: 0.95 }}
                             className={cn(
-                                "relative p-2 sm:p-3 rounded-full transition-all duration-300 group hover:bg-muted/50 flex-shrink-0",
-                                isActive ? "text-primary bg-primary/10" : "text-muted-foreground hover:text-foreground"
+                                "relative w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-full transition-colors duration-300 group flex-shrink-0 z-10",
+                                isActive || isHovered ? "text-white" : "text-muted-foreground hover:text-white"
                             )}
                             aria-label={item.name}
                         >
-                            <item.icon className={cn("w-4 h-4 sm:w-5 sm:h-5", isActive && "stroke-[2.5px]")} />
+                            {/* Dark Circular Background */}
+                            <AnimatePresence>
+                                {(isActive || isHovered) && (
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.8 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        exit={{ opacity: 0, scale: 0.8 }}
+                                        className="absolute inset-0 bg-[#1a1a1a] dark:bg-white/10 rounded-full -z-0"
+                                        transition={{ duration: 0.2 }}
+                                    />
+                                )}
+                            </AnimatePresence>
 
-                            {/* Tooltip - Hidden on mobile, visible on group hover for desktop */}
-                            <span className="hidden sm:block absolute -top-12 left-1/2 -translate-x-1/2 px-2 py-1 bg-popover text-popover-foreground text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap shadow-sm border border-border/50">
-                                {item.name}
-                            </span>
+                            <item.icon className="w-5 h-5 relative z-10" />
 
-                            {/* Active Indicator Dot */}
-                            {isActive && (
-                                <motion.div
-                                    layoutId="activeDot"
-                                    className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary"
-                                />
-                            )}
-                        </a>
+                            {/* Bubble Tooltip */}
+                            <AnimatePresence>
+                                {isHovered && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10, x: "-50%", scale: 0.8 }}
+                                        animate={{ opacity: 1, y: 0, x: "-50%", scale: 1 }}
+                                        exit={{ opacity: 0, y: 10, x: "-50%", scale: 0.8 }}
+                                        className="hidden sm:flex absolute -top-14 left-1/2 flex-col items-center pointer-events-none z-[60]"
+                                    >
+                                        <div className="bg-white text-black px-4 py-1.5 rounded-2xl text-[10px] font-bold tracking-widest uppercase shadow-xl whitespace-nowrap">
+                                            {item.name}
+                                        </div>
+                                        {/* Triangular Tail */}
+                                        <div className="w-2.5 h-2.5 bg-white rotate-45 -mt-1.5 shadow-sm" />
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </motion.a>
                     );
                 })}
 

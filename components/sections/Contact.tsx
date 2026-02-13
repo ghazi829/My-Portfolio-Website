@@ -32,8 +32,8 @@ export function Contact() {
         { icon: Mail, label: "Email", href: `mailto:${PERSONAL_INFO.email}` },
         { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/pir-ghazi-shah" },
         { icon: Github, label: "GitHub", href: "https://github.com/ghazi829" },
-        { icon: Twitter, label: "X (Twitter)", href: "#" },
-        { icon: Instagram, label: "Instagram", href: "#" },
+        { icon: Twitter, label: "X (Twitter)", href: "https://x.com/Pirghazi01" },
+        { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/art_by_pir?igsh=MWZxMHBwazdpN2s1aw==" },
         { icon: Telegram, label: "Telegram", href: "#" },
     ];
 

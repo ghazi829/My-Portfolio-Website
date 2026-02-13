@@ -20,7 +20,7 @@ export function Projects() {
                 </p>
                 <div className="flex flex-col items-center overflow-visible">
                     <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 dark:text-white tracking-tighter leading-none px-4">
-                        Code <span className="font-extralight italic gradient-text pr-2">Into Projects</span>
+                        Code <span className="font-serif font-light italic gradient-text pr-2">Into Projects</span>
                     </h2>
                 </div>
             </motion.div>

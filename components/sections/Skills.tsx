@@ -30,7 +30,7 @@ export function Skills() {
                 </p>
                 <div className="flex flex-col items-center overflow-visible">
                     <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 dark:text-white tracking-tighter leading-none px-4">
-                        The Magic <span className="font-extralight italic bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent pr-2">Behind</span>
+                        The Magic <span className="font-serif font-light italic bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent pr-2">Behind</span>
                     </h2>
                 </div>
             </motion.div>

@@ -22,7 +22,7 @@ export function Certifications() {
                 </p>
                 <div className="flex flex-col items-center overflow-visible">
                     <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 dark:text-white tracking-tighter leading-none px-4">
-                        Verified <span className="font-extralight italic bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent pr-2">Achievements</span>
+                        Verified <span className="font-serif font-light italic bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent pr-2">Achievements</span>
                     </h2>
                 </div>
             </motion.div>

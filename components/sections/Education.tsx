@@ -8,7 +8,22 @@ import { GraduationCap, MapPin, TrendingUp } from "lucide-react";
 export function Education() {
     return (
         <section id="education" className="section-container">
-            <SectionHeading>Education</SectionHeading>
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="text-center mb-20"
+            >
+                <p className="text-[10px] uppercase tracking-[0.6em] text-muted-foreground/50 mb-8 font-bold">
+                    ACADEMIC JOURNEY
+                </p>
+                <div className="flex flex-col items-center overflow-visible">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter leading-none px-4">
+                        Educational <span className="font-extralight italic bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent pr-2">Background</span>
+                    </h2>
+                </div>
+            </motion.div>
 
             <div className="max-w-6xl mx-auto px-4">
                 {EDUCATION.map((edu, index) => (

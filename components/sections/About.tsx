@@ -8,7 +8,22 @@ import { Mail, MapPin, Code2, Zap, Target } from "lucide-react";
 export function About() {
     return (
         <section id="about" className="section-container bg-muted/30">
-            <SectionHeading>About Me</SectionHeading>
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="text-center mb-20"
+            >
+                <p className="text-[10px] uppercase tracking-[0.6em] text-muted-foreground/50 mb-8 font-bold">
+                    GET TO KNOW ME
+                </p>
+                <div className="flex flex-col items-center overflow-visible">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter leading-none px-4">
+                        Crafting <span className="font-extralight italic bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent pr-2">Experiences</span>
+                    </h2>
+                </div>
+            </motion.div>
 
             <div className="max-w-7xl mx-auto">
                 {/* Bento Grid Layout */}

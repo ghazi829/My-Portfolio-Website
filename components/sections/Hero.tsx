@@ -89,10 +89,10 @@ export function Hero() {
                         variants={item}
                         className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
                     >
-                        <a href={PERSONAL_INFO.resumeUrl} download>
+                        <a href={PERSONAL_INFO.resumeUrl} target="_blank" rel="noopener noreferrer">
                             <Button size="lg" className="w-full sm:w-auto">
-                                <Download className="w-5 h-5 mr-2" />
-                                Download Resume
+                                <Eye className="w-5 h-5 mr-2" />
+                                View Resume
                             </Button>
                         </a>
                         <a href="#projects">

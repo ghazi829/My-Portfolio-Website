@@ -9,7 +9,7 @@ export const PERSONAL_INFO = {
     description: `Full Stack Web Developer fluent in MERN Stack (React, Node, Express, MongoDB).
 Focused on building fast, scalable web applications with clean code, smooth UX, and modern best practices.`,
     email: "ghazipir1@gmail.com",
-    resumeUrl: "/resume.pdf",
+    resumeUrl: "https://ghazi829.github.io/Ghazi-Resume/",
 };
 
 // Skills

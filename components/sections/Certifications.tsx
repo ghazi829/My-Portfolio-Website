@@ -21,7 +21,7 @@ export function Certifications() {
                     OFFICIAL RECOGNITION
                 </p>
                 <div className="flex flex-col items-center overflow-visible">
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter leading-none px-4">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 dark:text-white tracking-tighter leading-none px-4">
                         Verified <span className="font-extralight italic bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent pr-2">Achievements</span>
                     </h2>
                 </div>
@@ -64,7 +64,7 @@ export function Certifications() {
                                         <BadgeCheck className="w-5 h-5 text-white" />
                                     </Avatar>
                                     <div>
-                                        <h3 className="text-lg font-bold text-white leading-tight group-hover:text-primary transition-colors duration-300">
+                                        <h3 className="text-lg font-bold text-neutral-900 dark:text-white leading-tight group-hover:text-primary transition-colors duration-300">
                                             {cert.name}
                                         </h3>
                                         <p className="text-xs text-muted-foreground mt-0.5">{cert.issuer}</p>

@@ -19,7 +19,7 @@ export function Projects() {
                     SELECTED WORKS
                 </p>
                 <div className="flex flex-col items-center overflow-visible">
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter leading-none px-4">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 dark:text-white tracking-tighter leading-none px-4">
                         Code <span className="font-extralight italic gradient-text pr-2">Into Projects</span>
                     </h2>
                 </div>
@@ -59,7 +59,7 @@ export function Projects() {
                             </div>
 
                             <div className="p-6 flex flex-col flex-grow">
-                                <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors duration-300 mb-2">
+                                <h3 className="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-primary transition-colors duration-300 mb-2">
                                     {project.title}
                                 </h3>
                                 <p className="text-sm text-muted-foreground mb-6 line-clamp-2">

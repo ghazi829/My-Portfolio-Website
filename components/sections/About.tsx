@@ -19,7 +19,7 @@ export function About() {
                     GET TO KNOW ME
                 </p>
                 <div className="flex flex-col items-center overflow-visible">
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter leading-none px-4">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 dark:text-white tracking-tighter leading-none px-4">
                         Crafting <span className="font-extralight italic bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent pr-2">Experiences</span>
                     </h2>
                 </div>
@@ -44,7 +44,7 @@ export function About() {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <h3 className="text-xl md:text-2xl font-bold mb-1">{PERSONAL_INFO.name}</h3>
+                        <h3 className="text-xl md:text-2xl font-bold mb-1 text-neutral-900 dark:text-white">{PERSONAL_INFO.name}</h3>
                         <p className="text-sm md:text-base text-muted-foreground mb-4">{PERSONAL_INFO.title}</p>
 
                         <div className="flex flex-col gap-2 w-full text-sm">

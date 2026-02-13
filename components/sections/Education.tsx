@@ -19,7 +19,7 @@ export function Education() {
                     ACADEMIC JOURNEY
                 </p>
                 <div className="flex flex-col items-center overflow-visible">
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter leading-none px-4">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 dark:text-white tracking-tighter leading-none px-4">
                         Educational <span className="font-extralight italic bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent pr-2">Background</span>
                     </h2>
                 </div>
@@ -47,7 +47,7 @@ export function Education() {
                                 </div>
 
                                 <div className="flex-grow text-center sm:text-left">
-                                    <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 tracking-tight">
+                                    <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight">
                                         {edu.degree}
                                     </h3>
 

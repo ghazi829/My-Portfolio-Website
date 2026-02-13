@@ -38,7 +38,7 @@ export function Testimonials() {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-5xl md:text-7xl font-bold tracking-tighter"
+                    className="text-5xl md:text-7xl font-bold tracking-tighter text-neutral-900 dark:text-white"
                 >
                     VOICES OF <span className="italic font-serif font-light gradient-text">Collaboration</span>
                 </motion.h2>
@@ -70,7 +70,7 @@ export function Testimonials() {
                                     <Star key={i} className="w-3 h-3 fill-orange-500 text-orange-500" />
                                 ))}
                             </div>
-                            <h4 className="text-xs font-bold tracking-tighter mb-1 uppercase">
+                            <h4 className="text-xs font-bold tracking-tighter mb-1 uppercase text-neutral-900 dark:text-white">
                                 {testimonial.author}
                             </h4>
                             <p className="text-[10px] text-muted-foreground uppercase tracking-widest">

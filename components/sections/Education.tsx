@@ -7,41 +7,51 @@ import { GraduationCap, MapPin, TrendingUp } from "lucide-react";
 
 export function Education() {
     return (
-        <section id="education" className="section-container bg-muted/30">
+        <section id="education" className="section-container">
             <SectionHeading>Education</SectionHeading>
 
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-6xl mx-auto px-4">
                 {EDUCATION.map((edu, index) => (
                     <motion.div
                         key={edu.id}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: index * 0.2 }}
-                        className="glass-card hover:scale-105 transition-all duration-300"
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        className="relative group mb-6 last:mb-0"
                     >
-                        <div className="flex items-start gap-6">
-                            <div className="flex-shrink-0">
-                                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center">
-                                    <GraduationCap className="w-8 h-8 text-white" />
-                                </div>
-                            </div>
+                        {/* Card Container - Removed heavy black tint */}
+                        <div className="glass-card rounded-[2.5rem] p-6 sm:p-8 transition-all duration-500 hover:bg-background/40 shadow-2xl overflow-hidden">
+                            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
 
-                            <div className="flex-grow">
-                                <h3 className="text-2xl font-bold mb-2">{edu.degree}</h3>
-                                <div className="flex flex-wrap gap-4 text-muted-foreground mb-3">
-                                    <span className="flex items-center">
-                                        <GraduationCap className="w-4 h-4 mr-2" />
-                                        {edu.institution}
-                                    </span>
-                                    <span className="flex items-center">
-                                        <MapPin className="w-4 h-4 mr-2" />
-                                        {edu.location}
-                                    </span>
+                                {/* Logo Wrapper - Blue/Indigo Gradient to match Certifications */}
+                                <div className="flex-shrink-0">
+                                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center shadow-[0_0_20px_rgba(37,99,235,0.3)] border border-white/10">
+                                        <GraduationCap className="w-10 h-10 text-white" />
+                                    </div>
                                 </div>
-                                <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/20 text-primary font-medium">
-                                    <TrendingUp className="w-4 h-4 mr-2" />
-                                    {edu.status}
+
+                                <div className="flex-grow text-center sm:text-left">
+                                    <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 tracking-tight">
+                                        {edu.degree}
+                                    </h3>
+
+                                    <div className="flex flex-wrap justify-center sm:justify-start gap-x-6 gap-y-2 text-muted-foreground/80 font-medium mb-6">
+                                        <div className="flex items-center">
+                                            <GraduationCap className="w-4 h-4 mr-2 text-primary/70" />
+                                            {edu.institution}
+                                        </div>
+                                        <div className="flex items-center">
+                                            <MapPin className="w-4 h-4 mr-2 text-primary/70" />
+                                            {edu.location}
+                                        </div>
+                                    </div>
+
+                                    {/* Status Pill - Matching Blue Theme */}
+                                    <div className="inline-flex items-center px-6 py-2 rounded-full bg-blue-900/40 border border-blue-500/20 text-blue-400 font-bold text-sm tracking-wide">
+                                        <TrendingUp className="w-4 h-4 mr-2" />
+                                        {edu.status}
+                                    </div>
                                 </div>
                             </div>
                         </div>

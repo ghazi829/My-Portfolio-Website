@@ -62,6 +62,7 @@ export const PROJECTS: Project[] = [
         description: "Responsive personal portfolio showcasing my work and skills",
         tech: ["HTML", "CSS", "JavaScript"],
         liveUrl: "https://ghazi829.github.io/My-Portfolio/",
+        imageUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=2000",
         status: "completed",
     },
     {
@@ -70,6 +71,7 @@ export const PROJECTS: Project[] = [
         description: "Merge multiple PDFs quickly and easily with a clean interface",
         tech: ["React", "Tailwind CSS"],
         liveUrl: "https://mergeflow.netlify.app/",
+        imageUrl: "https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&q=80&w=2000",
         status: "completed",
     },
     {
@@ -77,6 +79,7 @@ export const PROJECTS: Project[] = [
         title: "Restaurant Management System",
         description: "Full-stack MERN application with online table booking, admin dashboard, and real-time operations",
         tech: ["MongoDB", "Express.js", "React", "Node.js"],
+        imageUrl: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=2070",
         status: "in-progress",
     },
 ];
@@ -100,18 +103,21 @@ export const CERTIFICATIONS: Certification[] = [
         name: "Web Development",
         issuer: "ITSAWK IT Training Center",
         date: "04/2025",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072",
     },
     {
         id: 2,
         name: "DIT",
         issuer: "GTVC Takht Bhai",
         date: "10/2024",
+        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=2070",
     },
     {
         id: 3,
         name: "Python",
         issuer: "ITSAWK IT Training Center",
         date: "09/2025",
+        image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=2070",
     },
 ];
 

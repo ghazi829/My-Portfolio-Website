@@ -18,14 +18,22 @@ export function Skills() {
     return (
         <section id="skills" className="py-24">
             {/* Heading */}
-            <div className="text-center mb-14">
-                <p className="text-sm tracking-widest text-muted-foreground uppercase mb-2">
-                    My Skillset
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="text-center mb-20"
+            >
+                <p className="text-[10px] uppercase tracking-[0.6em] text-muted-foreground/50 mb-8 font-bold">
+                    MY SKILLSET
                 </p>
-                <h2 className="text-5xl font-bold">
-                    The Magic <span className="text-pink-500 italic">Behind</span>
-                </h2>
-            </div>
+                <div className="flex flex-col items-center overflow-visible">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter leading-none px-4">
+                        The Magic <span className="font-extralight italic bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent pr-2">Behind</span>
+                    </h2>
+                </div>
+            </motion.div>
 
             {/* Tabs */}
             <div className="flex justify-center flex-wrap gap-2 md:gap-4 mb-20 px-4">

@@ -97,35 +97,41 @@ export function Navbar() {
                             )}
                             aria-label={item.name}
                         >
-                            {/* Dark Circular Background */}
+                            {/* Dark Circular Background - Matching the image */}
                             <AnimatePresence>
                                 {(isActive || isHovered) && (
                                     <motion.div
-                                        initial={{ opacity: 0, scale: 0.8 }}
+                                        initial={{ opacity: 0, scale: 0.5 }}
                                         animate={{ opacity: 1, scale: 1 }}
-                                        exit={{ opacity: 0, scale: 0.8 }}
-                                        className="absolute inset-0 bg-[#1a1a1a] dark:bg-white/10 rounded-full -z-0"
-                                        transition={{ duration: 0.2 }}
+                                        exit={{ opacity: 0, scale: 0.5 }}
+                                        className="absolute inset-x-[2.5px] inset-y-[2.5px] bg-[#222222] dark:bg-white/10 rounded-full -z-0"
+                                        transition={{ type: "spring", stiffness: 400, damping: 25 }}
                                     />
                                 )}
                             </AnimatePresence>
 
                             <item.icon className="w-5 h-5 relative z-10" />
 
-                            {/* Bubble Tooltip */}
+                            {/* Refined Bubble Tooltip - Exact match for the image */}
                             <AnimatePresence>
                                 {isHovered && (
                                     <motion.div
-                                        initial={{ opacity: 0, y: 10, x: "-50%", scale: 0.8 }}
+                                        initial={{ opacity: 0, y: 15, x: "-50%", scale: 0.5 }}
                                         animate={{ opacity: 1, y: 0, x: "-50%", scale: 1 }}
-                                        exit={{ opacity: 0, y: 10, x: "-50%", scale: 0.8 }}
-                                        className="hidden sm:flex absolute -top-14 left-1/2 flex-col items-center pointer-events-none z-[60]"
+                                        exit={{ opacity: 0, y: 15, x: "-50%", scale: 0.5 }}
+                                        className="hidden sm:flex absolute -top-16 left-1/2 flex-col items-center pointer-events-none z-[60]"
+                                        transition={{
+                                            type: "spring",
+                                            stiffness: 450,
+                                            damping: 20,
+                                            mass: 0.8
+                                        }}
                                     >
-                                        <div className="bg-white text-black px-4 py-1.5 rounded-2xl text-[10px] font-bold tracking-widest uppercase shadow-xl whitespace-nowrap">
+                                        <div className="bg-white text-black px-4 py-2 rounded-[1.2rem] text-[10px] sm:text-[11px] font-black tracking-[0.15em] uppercase shadow-[0_12px_40px_rgba(0,0,0,0.4)] whitespace-nowrap border border-white/20 leading-none">
                                             {item.name}
                                         </div>
-                                        {/* Triangular Tail */}
-                                        <div className="w-2.5 h-2.5 bg-white rotate-45 -mt-1.5 shadow-sm" />
+                                        {/* Downward Arrow / Tail */}
+                                        <div className="w-3 h-3 bg-white rotate-45 -mt-1.5 shadow-sm" />
                                     </motion.div>
                                 )}
                             </AnimatePresence>

@@ -60,7 +60,7 @@ export function Testimonials() {
                         <div>
                             <Quote className="w-10 h-10 text-muted-foreground/20 mb-6 group-hover:text-primary/20 transition-colors duration-500" />
                             <p className="text-sm md:text-base text-slate-900 dark:text-white/90 leading-relaxed mb-8 italic">
-                                "{testimonial.text}"
+                                &quot;{testimonial.text}&quot;
                             </p>
                         </div>
 

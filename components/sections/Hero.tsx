@@ -50,7 +50,7 @@ export function Hero() {
                         variants={item}
                         className="text-lg md:text-xl text-muted-foreground mb-4"
                     >
-                        Hi there! 👋 I'm
+                        Hi there! 👋 I&apos;m
                     </motion.p>
 
                     {/* Name */}

@@ -12,6 +12,25 @@ Focused on building fast, scalable web applications with clean code, smooth UX, 
     resumeUrl: "https://ghazi829.github.io/Ghazi-Resume/",
 };
 
+
+// Experience
+export const EXPERIENCE: Experience[] = [
+    {
+        id: 1,
+        position: "MERN Stack Developer",
+        company: "ITSAWK IT Training Center",
+        location: "Peshawar",
+        duration: "05/2025 – 10/2025",
+        responsibilities: [
+            "Designed and deployed 3+ responsive websites for small businesses ensuring 100% mobile compatibility.",
+            "Built portfolio and blog sites with clean UI, semantic HTML and smooth navigation.",
+            "Develop and maintain full stack web applications using modern technologies",
+            "Collaborate with team members to deliver high-quality software solutions",
+            "Implement responsive designs and ensure cross-browser compatibility",
+        ],
+    },
+];
+
 // Skills
 export const SKILLS = {
     frontend: [
@@ -72,7 +91,7 @@ export const PROJECTS: Project[] = [
         description: "A sleek PDF Merger engineered for dynamic file combining. Fast, intuitive, and built for modern workflows.",
         tech: ["React", "Tailwind CSS", "Vite", "PDF-Lib"],
         liveUrl: "https://mergeflow.netlify.app/",
-        imageUrl: "https://github.com/ghazi829/Images-of-Project-/raw/main/merge%20app.png",
+        imageUrl: "/assets/merge app.png",
         status: "completed",
     },
     {
@@ -90,7 +109,7 @@ export const PROJECTS: Project[] = [
         description: "A responsive web tool that compresses images instantly in your browser — no uploads required.",
         tech: ["HTML", "CSS", "JavaScript"],
         liveUrl: "https://ghazi829.github.io/Image-Compressor./",
-        imageUrl: "https://github.com/ghazi829/Images-of-Project-/raw/main/image%20comperser.png",
+        imageUrl: "/assets/image comperser.png",
         status: "completed",
     },
     {
@@ -116,7 +135,7 @@ export const PROJECTS: Project[] = [
         description: "A modern and fully responsive portfolio website built with HTML, CSS and JavaScript. This site showcases my skills, projects, and contact information with smooth navigation and an elegant user interface.",
         tech: ["HTML", "CSS", "JavaScript"],
         liveUrl: "https://ghazi829.github.io/My-Portfolio/",
-        imageUrl: "https://github.com/ghazi829/Images-of-Project-/raw/main/portfoli.png",
+        imageUrl: "/assets/portfoli.png",
         status: "completed",
     },
 ];

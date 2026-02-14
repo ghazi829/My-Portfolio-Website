@@ -44,10 +44,11 @@ export const SKILLS = {
         { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
         { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
         { name: "Vercel", icon: "https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" },
+        { name: "Netlify", icon: "https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" },
     ],
 
     ai: [
-         { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
         // { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
         // { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
         // { name: "OpenCV", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" },
@@ -62,25 +63,25 @@ export const PROJECTS: Project[] = [
         description: "A modern portal for Tourism expert guidance services. Features service showcases, testimonials, and a streamlined contact system.",
         tech: ["HTML", "CSS", "JavaScript"],
         liveUrl: "https://ghazi829.github.io/Tourism-website/",
-        imageUrl: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=2000",
+        imageUrl: "https://github.com/ghazi829/Tourism-website/raw/main/images/Screenshot%20.png",
         status: "completed",
     },
     {
         id: 2,
         title: "Modern PDF Merger",
         description: "A sleek PDF Merger engineered for dynamic file combining. Fast, intuitive, and built for modern workflows.",
-        tech: ["React", "Tailwind CSS"],
+        tech: ["React", "Tailwind CSS", "Vite", "PDF-Lib"],
         liveUrl: "https://mergeflow.netlify.app/",
-        imageUrl: "https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&q=80&w=2000",
+        imageUrl: "https://github.com/ghazi829/Images-of-Project-/raw/main/merge%20app.png",
         status: "completed",
     },
     {
         id: 3,
         title: "Dictionary App",
         description: "Instantly search word meanings, pronunciation, and examples with a clean, responsive interface.",
-        tech: ["HTML", "CSS", "JavaScript"],
+        tech: ["HTML", "CSS", "JavaScript", "API"],
         liveUrl: "https://ghazi829.github.io/Dictionary/",
-        imageUrl: "https://images.unsplash.com/photo-1589998059171-988d887df64e?auto=format&fit=crop&q=80&w=2000",
+        imageUrl: "https://github.com/ghazi829/Dictionary/raw/main/Picture.png",
         status: "completed",
     },
     {
@@ -89,7 +90,7 @@ export const PROJECTS: Project[] = [
         description: "A responsive web tool that compresses images instantly in your browser — no uploads required.",
         tech: ["HTML", "CSS", "JavaScript"],
         liveUrl: "https://ghazi829.github.io/Image-Compressor./",
-        imageUrl: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=2000",
+        imageUrl: "https://github.com/ghazi829/Images-of-Project-/raw/main/image%20comperser.png",
         status: "completed",
     },
     {
@@ -98,7 +99,7 @@ export const PROJECTS: Project[] = [
         description: "A responsive calculator that performs basic arithmetic with a clean, user-friendly interface.",
         tech: ["HTML", "CSS", "JavaScript"],
         liveUrl: "https://ghazi829.github.io/Calculator/",
-        imageUrl: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=2000",
+        imageUrl: "https://github.com/ghazi829/Calculator/raw/main/calculator-preview.png",
         status: "completed",
     },
     {
@@ -108,6 +109,15 @@ export const PROJECTS: Project[] = [
         tech: ["MongoDB", "Express.js", "React", "Node.js"],
         imageUrl: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=2070",
         status: "in-progress",
+    },
+    {
+        id: 7,
+        title: "Portfolio Website",
+        description: "A modern and fully responsive portfolio website built with HTML, CSS and JavaScript. This site showcases my skills, projects, and contact information with smooth navigation and an elegant user interface.",
+        tech: ["HTML", "CSS", "JavaScript"],
+        liveUrl: "https://ghazi829.github.io/My-Portfolio/",
+        imageUrl: "https://github.com/ghazi829/Images-of-Project-/raw/main/portfoli.png",
+        status: "completed",
     },
 ];
 
@@ -119,7 +129,7 @@ export const EDUCATION: Education[] = [
         degree: "BS Computer Science",
         institution: "NUML University",
         location: "Pakistan",
-        status: "Ongoing",
+        status: "2025 Ongoing",
     },
 ];
 
@@ -130,14 +140,14 @@ export const CERTIFICATIONS: Certification[] = [
         name: "Web Development",
         issuer: "ITSAWK IT Training Center",
         date: "04/2025",
-        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072",
+        image: "/assets/web-development-certificate.jpg",
     },
     {
         id: 2,
-        name: "DIT",
+        name: "Diploma in Information Technology",
         issuer: "GTVC Takht Bhai",
         date: "10/2024",
-        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=2070",
+        image: "/assets/diploma-information-technology.jpg",
     },
     {
         id: 3,

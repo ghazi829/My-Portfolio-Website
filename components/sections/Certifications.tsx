@@ -1,13 +1,16 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { CERTIFICATIONS } from "@/lib/constants";
-import { BadgeCheck, Calendar } from "lucide-react";
+import { BadgeCheck, Calendar, X } from "lucide-react";
 import { Avatar } from "@mui/material";
+import { useState } from "react";
 
 export function Certifications() {
+    const [selectedCert, setSelectedCert] = useState<string | null>(null);
+
     return (
         <section id="certifications" className="section-container">
             <motion.div
@@ -35,6 +38,8 @@ export function Certifications() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
+                        onClick={() => cert.image && setSelectedCert(cert.image)}
+                        className="cursor-pointer"
                     >
                         <Card className="h-full overflow-hidden flex flex-col p-0 group border-border/40 hover:border-primary/40 transition-all duration-500">
                             {/* Certificate Image Container */}
@@ -85,6 +90,39 @@ export function Certifications() {
                     </motion.div>
                 ))}
             </div>
+
+            {/* Certificate Modal */}
+            <AnimatePresence>
+                {selectedCert && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+                        onClick={() => setSelectedCert(null)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            className="relative max-w-4xl w-full max-h-[90vh] flex items-center justify-center"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <button
+                                onClick={() => setSelectedCert(null)}
+                                className="absolute -top-12 right-0 p-2 text-white/80 hover:text-white transition-colors"
+                            >
+                                <X className="w-6 h-6" />
+                            </button>
+                            <img
+                                src={selectedCert}
+                                alt="Certificate"
+                                className="max-w-full max-h-[85vh] rounded-lg shadow-2xl"
+                            />
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 }

@@ -38,14 +38,22 @@ export function Contact() {
     ];
 
     return (
-        <section id="contact" className="section-container bg-muted/30">
-            <SectionHeading
-                subtitle="GET IN TOUCH"
-                showLine={false}
-                className="font-serif italic font-light text-5xl md:text-7xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent "
-            >
-                Contact Me
-            </SectionHeading>
+        <section id="contact" className="section-container">
+            <div className="text-center mb-16">
+                <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-6 text-[22px] font-bold uppercase tracking-[0.5em] text-zinc-500"
+                >
+                    GET IN TOUCH
+                </motion.p>
+                <h2 className="flex flex-row whitespace-nowrap items-baseline justify-center leading-[0.9] select-none text-[7.5vw] sm:text-[4rem] md:text-[6rem] lg:text-[7rem] px-2">
+                    <span className="font-serif italic font-light tracking-tight bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent drop-shadow-sm">
+                        Contact Me
+                    </span>
+                </h2>
+            </div>
 
             <div className="max-w-6xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-8">

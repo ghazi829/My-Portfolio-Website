@@ -97,31 +97,20 @@ export function Footer() {
     };
 
     return (
-        <footer className="relative py-12 border-t border-border/50 bg-background/50 backdrop-blur-sm">
-            <div className="section-container flex flex-col items-center justify-center gap-6">
-
-                {/* Animated Lottie Instead of Image */}
-                <motion.div
-                    animate={{ y: [0, -10, 0] }}
-                    transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                    }}
-                    className="relative w-20 h-20 flex items-center justify-center rounded-full overflow-hidden border-2 border-primary/20"
-                >
+        <footer className="relative w-full border-t bg-background pb-10 pt-6">
+            <div className="mx-auto overflow-visible pointer-events-none absolute left-1/2 top-0 z-10 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-background ring-1 ring-border sm:h-24 sm:w-24" aria-hidden="true">
+                <div className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 origin-center flex items-center justify-center">
                     <Lottie
                         animationData={animationData}
                         loop={true}
-                        className="w-full h-full"
+                        className="w-[80%] h-[80%]"
                     />
-                </motion.div>
-
-                {/* Copyright */}
-                <p className="text-center text-sm text-muted-foreground font-light">
-                    © {currentYear} All rights reserved by {PERSONAL_INFO.name}.
+                </div>
+            </div>
+            <div className="container mx-auto flex h-full flex-col sm:flex-row items-center justify-center gap-6 mt-12">
+                <p className="text-sm text-muted-foreground leading-none font-light">
+                    © {currentYear} {PERSONAL_INFO.name}. All rights reserved.
                 </p>
-
             </div>
 
             {/* Scroll to Top Button */}

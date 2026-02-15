@@ -30,18 +30,18 @@ export function Testimonials() {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4 font-medium"
+                    className="mb-6 text-[10px] sm:text-[12px] font-bold uppercase tracking-[0.5em] text-zinc-500"
                 >
-                    Social Proof
+                    SOCIAL PROOF
                 </motion.p>
-                <motion.h2
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-5xl md:text-7xl font-bold tracking-tighter text-neutral-900 dark:text-white"
-                >
-                    VOICES OF <span className="italic font-serif font-light gradient-text">Collaboration</span>
-                </motion.h2>
+                <h2 className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 leading-[0.9] select-none text-[3.5rem] sm:text-[5.5rem] lg:text-[7.5rem]">
+                    <span className="font-sans font-black uppercase tracking-[-0.04em] text-zinc-900 dark:text-white">
+                        Voices of
+                    </span>
+                    <span className="font-serif italic font-light tracking-tight bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-sm">
+                        Collaboration
+                    </span>
+                </h2>
             </div>
 
             <motion.div

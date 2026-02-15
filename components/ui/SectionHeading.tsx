@@ -31,7 +31,7 @@ export function SectionHeading({
             )}
             <h2
                 className={cn(
-                    "text-3xl md:text-4xl lg:text-5xl font-bold font-poppins mb-4",
+                    "text-4xl md:text-5xl lg:text-6xl font-bold font-poppins mb-4",
                     !className?.includes("gradient-text") && "gradient-text",
                     className
                 )}

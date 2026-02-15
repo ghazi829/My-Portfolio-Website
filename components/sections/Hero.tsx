@@ -56,7 +56,7 @@ export function Hero() {
                     {/* Name */}
                     <motion.h1
                         variants={item}
-                        className="text-5xl sm:text-6xl lg:text-7xl font-bold font-poppins mb-4"
+                        className="text-6xl sm:text-7xl lg:text-8xl font-bold font-poppins mb-4"
                     >
                         <span className="gradient-text">{PERSONAL_INFO.name}</span>
                     </motion.h1>

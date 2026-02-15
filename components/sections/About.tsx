@@ -15,11 +15,11 @@ export function About() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="text-center mb-20"
             >
-                <p className="text-[10px] uppercase tracking-[0.6em] text-muted-foreground/50 mb-8 font-bold">
+                <p className="mb-6 text-[10px] sm:text-[12px] font-bold uppercase tracking-[0.5em] text-zinc-500">
                     GET TO KNOW ME
                 </p>
                 <div className="flex flex-col items-center overflow-visible">
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 dark:text-white tracking-tighter leading-none px-4">
+                    <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-neutral-900 dark:text-white tracking-tighter leading-none px-4">
                         Crafting <span className="font-serif font-light italic bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent pr-2">Experiences</span>
                     </h2>
                 </div>

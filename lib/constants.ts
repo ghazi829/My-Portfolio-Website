@@ -47,7 +47,7 @@ export const SKILLS = {
 
     backend: [
         { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-        { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" },
+        { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
         // { name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
         { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
         { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
@@ -55,7 +55,7 @@ export const SKILLS = {
 
     realtime: [
         { name: "Socket.io", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" },
-        { name: "WebRTC", icon: "https://www.vectorlogo.zone/logos/webrtc/webrtc-icon.svg" },
+        // { name: "WebRTC", icon: "https://www.vectorlogo.zone/logos/webrtc/webrtc-icon.svg" },
     ],
 
     devops: [
@@ -68,6 +68,7 @@ export const SKILLS = {
 
     ai: [
         { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { name: "n8n", icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/n8n-icon.png" },
         // { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
         // { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
         // { name: "OpenCV", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" },
@@ -78,12 +79,11 @@ export const SKILLS = {
 export const PROJECTS: Project[] = [
     {
         id: 1,
-        title: "Tourism Guide & Consulting",
-        description: "A modern portal for Tourism expert guidance services. Features service showcases, testimonials, and a streamlined contact system.",
-        tech: ["HTML", "CSS", "JavaScript"],
-        liveUrl: "https://ghazi829.github.io/Tourism-website/",
-        imageUrl: "https://github.com/ghazi829/Tourism-website/raw/main/images/Screenshot%20.png",
-        status: "completed",
+        title: "Restaurant Management System",
+        description: "Full-stack MERN application with online table booking, admin dashboard, and real-time operations",
+        tech: ["MongoDB", "Express.js", "React", "Node.js"],
+        imageUrl: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=2070",
+        status: "in-progress",
     },
     {
         id: 2,
@@ -96,15 +96,6 @@ export const PROJECTS: Project[] = [
     },
     {
         id: 3,
-        title: "Dictionary App",
-        description: "Instantly search word meanings, pronunciation, and examples with a clean, responsive interface.",
-        tech: ["HTML", "CSS", "JavaScript", "API"],
-        liveUrl: "https://ghazi829.github.io/Dictionary/",
-        imageUrl: "https://github.com/ghazi829/Dictionary/raw/main/Picture.png",
-        status: "completed",
-    },
-    {
-        id: 4,
         title: "Image Compressor",
         description: "A responsive web tool that compresses images instantly in your browser — no uploads required.",
         tech: ["HTML", "CSS", "JavaScript"],
@@ -113,21 +104,31 @@ export const PROJECTS: Project[] = [
         status: "completed",
     },
     {
+        id: 4,
+        title: "Dictionary App",
+        description: "Instantly search word meanings, pronunciation, and examples with a clean, responsive interface.",
+        tech: ["HTML", "CSS", "JavaScript", "API"],
+        liveUrl: "https://ghazi829.github.io/Dictionary/",
+        imageUrl: "https://github.com/ghazi829/Dictionary/raw/main/Picture.png",
+        status: "completed",
+    },
+    {
         id: 5,
-        title: "Smart Calculator",
-        description: "A responsive calculator that performs basic arithmetic with a clean, user-friendly interface.",
+        title: "Tourism Guide & Consulting",
+        description: "A modern portal for Tourism expert guidance services. Features service showcases, testimonials, and a streamlined contact system.",
         tech: ["HTML", "CSS", "JavaScript"],
-        liveUrl: "https://ghazi829.github.io/Calculator/",
-        imageUrl: "https://github.com/ghazi829/Calculator/raw/main/calculator-preview.png",
+        liveUrl: "https://ghazi829.github.io/Tourism-website/",
+        imageUrl: "https://github.com/ghazi829/Tourism-website/raw/main/images/Screenshot%20.png",
         status: "completed",
     },
     {
         id: 6,
-        title: "Restaurant Management System",
-        description: "Full-stack MERN application with online table booking, admin dashboard, and real-time operations",
-        tech: ["MongoDB", "Express.js", "React", "Node.js"],
-        imageUrl: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=2070",
-        status: "in-progress",
+        title: "QR Code Generator",
+        description: "A sleek and responsive web application that generates QR codes instantly using the GoQR API. Built with pure HTML, CSS, and JavaScript.",
+        tech: ["HTML", "CSS", "JavaScript", "GoQR API"],
+        liveUrl: "https://ghazi829.github.io/QR-Code-Generator",
+        imageUrl: "https://github.com/ghazi829/QR-Code-Generator/raw/main/Preview.png",
+        status: "completed",
     },
     {
         id: 7,
@@ -140,14 +141,15 @@ export const PROJECTS: Project[] = [
     },
     {
         id: 8,
-        title: "QR Code Generator",
-        description: "A sleek and responsive web application that generates QR codes instantly using the GoQR API. Built with pure HTML, CSS, and JavaScript.",
-        tech: ["HTML", "CSS", "JavaScript","GoQR API"],
-        liveUrl: "https://ghazi829.github.io/QR-Code-Generator",
-        imageUrl: "https://github.com/ghazi829/QR-Code-Generator/raw/main/Preview.png",
+        title: "Smart Calculator",
+        description: "A responsive calculator that performs basic arithmetic with a clean, user-friendly interface.",
+        tech: ["HTML", "CSS", "JavaScript"],
+        liveUrl: "https://ghazi829.github.io/Calculator/",
+        imageUrl: "https://github.com/ghazi829/Calculator/raw/main/calculator-preview.png",
         status: "completed",
     },
 ];
+
 
 
 // Education

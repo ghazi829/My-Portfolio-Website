@@ -24,12 +24,17 @@ export function Projects() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="text-center mb-20"
             >
-                <p className="text-[10px] uppercase tracking-[0.6em] text-muted-foreground/50 mb-8 font-bold">
+                <p className="mb-6 text-[10px] sm:text-[12px] font-bold uppercase tracking-[0.5em] text-zinc-500">
                     SELECTED WORKS
                 </p>
                 <div className="flex flex-col items-center overflow-visible">
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 dark:text-white tracking-tighter leading-none px-4">
-                        Code <span className="font-serif font-light italic gradient-text pr-2">Into Projects</span>
+                    <h2 className="flex flex-col items-center justify-center leading-[0.9] select-none text-[3.5rem] sm:text-[5.5rem] lg:text-[7.5rem]">
+                        <span className="font-sans font-black tracking-[-0.04em] text-zinc-900 dark:text-white">
+                            Code
+                        </span>
+                        <span className="font-serif italic font-light tracking-tight bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent drop-shadow-sm">
+                            Into Projects
+                        </span>
                     </h2>
                 </div>
             </motion.div>

@@ -39,12 +39,17 @@
     @apply border-gray-200 dark:border-gray-800;
   }
 
-  body {
-    @apply bg-background text-foreground;
-  }
-
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden !important;
+    width: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden !important;
+    width: 100%;
+    position: relative;
   }
 }
 

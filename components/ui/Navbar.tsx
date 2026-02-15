@@ -75,9 +75,9 @@ export function Navbar() {
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="fixed bottom-8 inset-x-0 mx-auto z-50 w-fit"
+            className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-fit"
         >
-            <div className="flex items-center gap-1 sm:gap-2 p-1.5 sm:p-2 rounded-full glass border border-border/50 bg-background/80 backdrop-blur-xl shadow-lg ring-1 ring-border/20 max-w-[calc(100vw-2rem)] overflow-x-auto hide-scrollbar">
+            <div className="flex items-center gap-1 sm:gap-2 p-1 sm:p-2 rounded-full glass border border-border/50 bg-background/80 backdrop-blur-xl shadow-lg ring-1 ring-border/20 max-w-[calc(100vw-1.5rem)] overflow-x-auto hide-scrollbar">
 
                 {NAV_ITEMS.map((item) => {
                     const isActive = activeSection === item.href.substring(1);
@@ -92,7 +92,7 @@ export function Navbar() {
                             onMouseLeave={() => setHoveredItem(null)}
                             whileTap={{ scale: 0.95 }}
                             className={cn(
-                                "relative w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-full transition-colors duration-300 group flex-shrink-0 z-10",
+                                "relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full transition-colors duration-300 group flex-shrink-0 z-10",
                                 isActive || isHovered ? "text-white" : "text-muted-foreground hover:text-white"
                             )}
                             aria-label={item.name}

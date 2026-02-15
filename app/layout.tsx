@@ -44,14 +44,16 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={`${inter.variable} ${poppins.variable} font-sans antialiased pb-24 overflow-x-hidden`}>
+            <body className={`${inter.variable} ${poppins.variable} font-sans antialiased pb-24 overflow-x-hidden w-full relative`}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
                     enableSystem
                     disableTransitionOnChange
                 >
-                    {children}
+                    <div className="relative w-full overflow-x-hidden">
+                        {children}
+                    </div>
                 </ThemeProvider>
             </body>
         </html>

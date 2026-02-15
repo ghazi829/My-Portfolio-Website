@@ -138,6 +138,15 @@ export const PROJECTS: Project[] = [
         imageUrl: "/assets/portfoli.png",
         status: "completed",
     },
+    {
+        id: 8,
+        title: "QR Code Generator",
+        description: "A sleek and responsive web application that generates QR codes instantly using the GoQR API. Built with pure HTML, CSS, and JavaScript.",
+        tech: ["HTML", "CSS", "JavaScript","GoQR API"],
+        liveUrl: "https://ghazi829.github.io/QR-Code-Generator",
+        imageUrl: "https://github.com/ghazi829/QR-Code-Generator/raw/main/Preview.png",
+        status: "completed",
+    },
 ];
 
 

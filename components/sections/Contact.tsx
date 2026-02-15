@@ -82,7 +82,7 @@ export function Contact() {
                                         transition={{ duration: 0.3, delay: index * 0.1 }}
                                         className="flex items-center gap-4 text-foreground/70 hover:text-foreground transition-colors group"
                                     >
-                                        <link.icon className="w-5 h-5 flex-shrink-0" />
+                                        <link.icon className="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-3" />
                                         <span className="text-lg font-light">{link.label}</span>
                                     </motion.a>
                                 ))}

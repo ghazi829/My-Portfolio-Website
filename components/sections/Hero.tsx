@@ -98,7 +98,7 @@ export function Hero() {
                         <a href="#projects">
                             <Button variant="outline" size="lg" className="w-full sm:w-auto">
                                 <Eye className="w-5 h-5 mr-2" />
-                                View Projects
+                                See our work
                             </Button>
                         </a>
                     </motion.div>

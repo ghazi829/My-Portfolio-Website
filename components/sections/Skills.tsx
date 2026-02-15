@@ -47,11 +47,12 @@ export function Skills() {
                     <button
                         key={tab.key}
                         onClick={() => setActiveTab(tab.key)}
-                        className={`px-6 py-2.5 md:px-8 md:py-3 rounded-full text-sm font-medium transition-all duration-300
-              ${activeTab === tab.key
-                                ? "bg-[#0f172a] text-white shadow-xl scale-105"
-                                : "bg-muted/30 text-muted-foreground hover:bg-muted/50"
-                            }`}
+                        className={cn(
+                            "px-6 py-2.5 md:px-8 md:py-3 rounded-full text-sm font-medium transition-all duration-300",
+                            activeTab === tab.key
+                                ? "bg-zinc-900 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-900 shadow-xl scale-105"
+                                : "bg-zinc-100/50 dark:bg-zinc-800/40 text-zinc-500 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-200/50 dark:hover:bg-zinc-700/50"
+                        )}
                     >
                         {tab.label}
                     </button>

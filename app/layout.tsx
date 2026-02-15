@@ -48,7 +48,7 @@ export default function RootLayout({
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="light"
-                    enableSystem
+                    enableSystem={false}
                     disableTransitionOnChange
                 >
                     <div className="relative w-full overflow-x-hidden">

@@ -48,7 +48,7 @@ export function Contact() {
                 >
                     GET IN TOUCH
                 </motion.p>
-                <h2 className="flex flex-row whitespace-nowrap items-baseline justify-center leading-[0.9] select-none text-[7.5vw] sm:text-[4rem] md:text-[6rem] lg:text-[7rem] px-2">
+                <h2 className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 leading-[0.9] select-none text-[3.5rem] sm:text-[6rem] lg:text-[8rem]">
                     <span className="font-serif italic font-light tracking-tight bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent drop-shadow-sm">
                         Contact Me
                     </span>

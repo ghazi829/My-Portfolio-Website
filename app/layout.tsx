@@ -44,7 +44,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={`${inter.variable} ${poppins.variable} font-sans antialiased pb-24`}>
+            <body className={`${inter.variable} ${poppins.variable} font-sans antialiased pb-24 overflow-x-hidden`}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"

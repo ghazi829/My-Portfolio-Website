@@ -15,7 +15,9 @@ export default function Home() {
     return (
         <main className="relative overflow-x-hidden w-full">
             <TopBar />
-            <Navbar />
+            <div className="hidden sm:block">
+                <Navbar />
+            </div>
             <Hero />
             <About />
             <Experience />

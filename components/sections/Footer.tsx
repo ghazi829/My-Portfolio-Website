@@ -119,7 +119,7 @@ export function Footer() {
 
                 {/* Copyright */}
                 <p className="text-center text-sm text-muted-foreground font-light">
-                    © {currentYear} {PERSONAL_INFO.name}. All rights reserved.
+                    © {currentYear} All rights reserved by {PERSONAL_INFO.name}.
                 </p>
 
             </div>

@@ -75,7 +75,7 @@ export function Navbar() {
             initial={{ y: 100, x: "-50%", opacity: 0 }}
             animate={{ y: 0, x: "-50%", opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="fixed bottom-8 left-1/2 z-50 w-fit"
+            className="hidden sm:flex fixed bottom-8 left-1/2 z-50 w-fit"
         >
             <div className="flex items-center gap-1 sm:gap-2 p-1 sm:p-2 rounded-full glass border border-border/50 bg-background/80 backdrop-blur-xl shadow-lg ring-1 ring-border/20 max-w-[calc(100vw-1.5rem)] overflow-x-auto hide-scrollbar">
 

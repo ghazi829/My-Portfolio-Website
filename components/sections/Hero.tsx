@@ -1,16 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Download, Eye, Github, Linkedin, Globe } from "lucide-react";
+import { Eye, Github, Linkedin, Globe, MapPin, Layers, Send } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { PERSONAL_INFO, SOCIAL_LINKS } from "@/lib/constants";
+import { PERSONAL_INFO } from "@/lib/constants";
 
 const container = {
     hidden: { opacity: 0 },
     show: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.2,
+            staggerChildren: 0.1,
         },
     },
 };
@@ -20,127 +20,110 @@ const item = {
     show: { opacity: 1, y: 0 },
 };
 
-const iconMap = {
-    github: Github,
-    linkedin: Linkedin,
-    globe: Globe,
-};
-
 export function Hero() {
     return (
         <section
             id="hero"
-            className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+            className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-background text-foreground transition-colors duration-500"
         >
-            {/* Animated Background */}
-            <div className="absolute inset-0 -z-10">
-                <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/30 rounded-full blur-3xl animate-bounce-slow" />
-                <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/30 rounded-full blur-3xl animate-bounce-slow delay-1000" />
+            {/* Minimal Background Accent */}
+            <div className="absolute inset-0 -z-10 opacity-20 dark:opacity-30">
+                <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[120px] animate-pulse" />
+                <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[120px] animate-pulse delay-1000" />
             </div>
 
-            <div className="section-container">
+            <div className="section-container relative z-10">
                 <motion.div
                     variants={container}
                     initial="hidden"
                     animate="show"
-                    className="text-center max-w-4xl mx-auto"
+                    className="text-center max-w-7xl mx-auto flex flex-col items-center"
                 >
-                    {/* Greeting */}
+                    {/* Top Label */}
                     <motion.p
                         variants={item}
-                        className="text-lg md:text-xl text-muted-foreground mb-4"
+                        className="mb-8 text-[10px] sm:text-[12px] font-bold uppercase tracking-[0.6em] text-zinc-500 dark:text-zinc-400"
                     >
-                        Hi there! 👋 I&apos;m
+                        DESIGN IN DETAILS
                     </motion.p>
 
-                    {/* Name */}
-                    <motion.h1
-                        variants={item}
-                        className="text-6xl sm:text-7xl lg:text-8xl font-bold font-poppins mb-4"
-                    >
-                        <span className="gradient-text">{PERSONAL_INFO.name}</span>
-                    </motion.h1>
+                    {/* Primary Heading - Name Split */}
+                    <motion.div variants={item} className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 leading-[0.85] select-none text-[12vw] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] mb-2 uppercase">
+                        <span className="font-serif italic font-extralight lowercase tracking-tight text-foreground/80 dark:text-white/90">
+                            Pir Ghazi
+                        </span>
+                        <span className="font-sans font-black tracking-tighter text-foreground">
+                            Shah
+                        </span>
+                    </motion.div>
 
-                    {/* Title */}
-                    <motion.h2
-                        variants={item}
-                        className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground/90 mb-3"
-                    >
-                        {PERSONAL_INFO.title}
-                    </motion.h2>
-
-                    <motion.p
-                        variants={item}
-                        className="text-lg sm:text-xl text-muted-foreground mb-6"
-                    >
-                        {PERSONAL_INFO.subtitle}
-                    </motion.p>
+                    {/* Secondary Heading - Title Split */}
+                    <motion.div variants={item} className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 leading-[0.85] select-none text-[8vw] sm:text-[4rem] md:text-[6rem] lg:text-[8rem] mb-12 uppercase">
+                        <span className="font-sans font-black tracking-tighter text-foreground">
+                            BS COMPUTER
+                        </span>
+                        <span className="font-serif italic font-extralight lowercase tracking-tight text-foreground/80 dark:text-white/90">
+                            Science Student
+                        </span>
+                    </motion.div>
 
                     {/* Tagline */}
                     <motion.p
                         variants={item}
-                        className="text-base sm:text-lg md:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto"
+                        className="text-sm sm:text-base md:text-lg text-muted-foreground mb-12 max-w-xl font-light tracking-wide px-4"
                     >
-                        {PERSONAL_INFO.tagline}
+                        Building fast, scalable web applications with the MERN stack
                     </motion.p>
 
                     {/* CTA Buttons */}
                     <motion.div
                         variants={item}
-                        className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+                        className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                     >
-                        <a href={PERSONAL_INFO.resumeUrl} target="_blank" rel="noopener noreferrer">
-                            <Button size="lg" className="w-full sm:w-auto">
-                                <Eye className="w-5 h-5 mr-2" />
-                                View Resume
+                        <a href="#contact">
+                            <Button className="rounded-full px-10 py-6 bg-foreground text-background hover:opacity-90 transition-all font-medium text-sm">
+                                Get in touch
                             </Button>
                         </a>
                         <a href="#projects">
-                            <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                                <Eye className="w-5 h-5 mr-2" />
+                            <Button variant="outline" className="rounded-full px-10 py-6 border-zinc-200 dark:border-zinc-800 text-foreground hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all font-medium text-sm">
                                 See our work
                             </Button>
                         </a>
                     </motion.div>
-
-                    {/* Social Links */}
-                    {/* <motion.div
-                        variants={item}
-                        className="flex justify-center gap-6"
-                    >
-                        {SOCIAL_LINKS.map((link) => {
-                            const Icon = iconMap[link.icon as keyof typeof iconMap];
-                            return (
-                                <a
-                                    key={link.name}
-                                    href={link.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-3 rounded-full glass hover:scale-110 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
-                                    aria-label={link.name}
-                                >
-                                    <Icon className="w-6 h-6" />
-                                </a>
-                            );
-                        })}
-                    </motion.div> */}
                 </motion.div>
+            </div>
+
+            {/* Corner Branding - Bottom Left */}
+            <div className="absolute bottom-10 left-10 hidden lg:flex items-center gap-4 group">
+                <div className="p-3 rounded-xl bg-zinc-100 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/50 text-green-600 dark:text-green-500 group-hover:scale-110 transition-transform">
+                    <MapPin className="w-5 h-5" />
+                </div>
+                <div className="flex flex-col">
+                    <span className="text-[10px] font-black tracking-[0.2em] text-foreground">BASED IN PESHAWAR,</span>
+                    <span className="text-[10px] font-bold tracking-[0.2em] text-muted-foreground uppercase italic font-serif">Pakistan</span>
+                </div>
+            </div>
+
+            {/* Corner Branding - Bottom Right */}
+            <div className="absolute bottom-10 right-10 hidden lg:flex items-center gap-4 group text-right">
+                <div className="flex flex-col items-end">
+                    <span className="text-[10px] font-black tracking-[0.2em] text-foreground uppercase">SOFTWARE ENGINEER,</span>
+                    <span className="text-[10px] font-bold tracking-[0.2em] text-muted-foreground italic font-serif">& DESIGNER</span>
+                </div>
+                <div className="p-3 rounded-xl bg-zinc-100 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/50 text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">
+                    <Layers className="w-5 h-5" />
+                </div>
             </div>
 
             {/* Scroll Indicator */}
             <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                    duration: 1,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                }}
-                className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2, duration: 1 }}
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block"
             >
-                <div className="w-6 h-10 rounded-full border-2 border-foreground/30 flex items-start justify-center p-2">
-                    <div className="w-1 h-2 bg-foreground/50 rounded-full animate-bounce" />
-                </div>
+                <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-zinc-200 dark:via-zinc-800 to-transparent" />
             </motion.div>
         </section>
     );

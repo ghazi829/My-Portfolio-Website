@@ -18,7 +18,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                     "hover:scale-105 active:scale-95",
                     {
                         // Variants
-                        "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/60":
+                        "bg-gradient-to-r from-purple-600 to-pink-600 text-white":
                             variant === "primary",
                         "bg-secondary text-secondary-foreground hover:bg-secondary/80":
                             variant === "secondary",

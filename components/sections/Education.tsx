@@ -62,9 +62,9 @@ export function Education() {
                                         </div>
                                     </div>
 
-                                    {/* Status Pill - Matching Blue Theme */}
-                                    <div className="inline-flex items-center px-6 py-2 rounded-full bg-blue-900/40 border border-blue-500/20 text-blue-400 font-bold text-sm tracking-wide">
-                                        <TrendingUp className="w-4 h-4 mr-2" />
+                                    {/* Status Pill - Theme Responsive Blue */}
+                                    <div className="inline-flex items-center px-6 py-2 rounded-full bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-500/20 text-blue-600 dark:text-blue-400 font-bold text-sm tracking-wide">
+                                        <TrendingUp className="w-4 h-4 mr-2 text-blue-500 dark:text-blue-400" />
                                         {edu.status}
                                     </div>
                                 </div>

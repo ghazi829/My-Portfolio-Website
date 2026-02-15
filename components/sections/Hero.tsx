@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Eye, Github, Linkedin, Globe, MapPin, Layers, Send } from "lucide-react";
+import { Eye, Github, Linkedin, Globe, MapPin, Layers, Send, Download } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { PERSONAL_INFO } from "@/lib/constants";
 
@@ -81,12 +81,18 @@ export function Hero() {
                         className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                     >
                         <a href="#contact">
-                            <Button className="rounded-full px-10 py-6 bg-foreground text-background hover:opacity-90 transition-all font-medium text-sm">
+                            <Button className="rounded-full px-10 py-6 bg-foreground text-background border-2 border-foreground hover:bg-background hover:text-foreground transition-all duration-300 font-medium text-sm">
                                 Get in touch
                             </Button>
                         </a>
+                        <a href={PERSONAL_INFO.resumeUrl} target="_blank" rel="noopener noreferrer">
+                            <Button variant="outline" className="rounded-full px-10 py-6 border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all duration-300 font-medium text-sm">
+                                <Download className="w-4 h-4 mr-2" />
+                                View Resume
+                            </Button>
+                        </a>
                         <a href="#projects">
-                            <Button variant="outline" className="rounded-full px-10 py-6 border-zinc-200 dark:border-zinc-800 text-foreground hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all font-medium text-sm">
+                            <Button variant="outline" className="rounded-full px-10 py-6 border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all duration-300 font-medium text-sm">
                                 See our work
                             </Button>
                         </a>
@@ -111,9 +117,11 @@ export function Hero() {
                     <span className="text-[10px] font-black tracking-[0.2em] text-foreground uppercase">SOFTWARE ENGINEER,</span>
                     <span className="text-[10px] font-bold tracking-[0.2em] text-muted-foreground italic font-serif">& DESIGNER</span>
                 </div>
-                <div className="p-3 rounded-xl bg-zinc-100 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/50 text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">
-                    <Layers className="w-5 h-5" />
-                </div>
+                <a href="https://ghazi829.github.io/Ghazi-Resume/" target="_blank" rel="noopener noreferrer">
+                    <div className="p-3 rounded-xl bg-zinc-100 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/50 text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">
+                        <Layers className="w-5 h-5" />
+                    </div>
+                </a>
             </div>
 
             {/* Scroll Indicator */}

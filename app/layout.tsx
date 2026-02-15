@@ -47,7 +47,7 @@ export default function RootLayout({
             <body className={`${inter.variable} ${poppins.variable} font-sans antialiased pb-24 overflow-x-hidden w-full relative`}>
                 <ThemeProvider
                     attribute="class"
-                    defaultTheme="dark"
+                    defaultTheme="light"
                     enableSystem
                     disableTransitionOnChange
                 >

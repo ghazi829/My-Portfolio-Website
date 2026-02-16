@@ -197,7 +197,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     },
     {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/pir-ghazi-shah",
+        url: "https://www.linkedin.com/in/pir-ghazi-shah-dev",
         icon: "linkedin",
     },
     {

@@ -80,17 +80,17 @@ export function Hero() {
                         className="flex flex-wrap gap-4 justify-center items-center w-full max-w-md sm:max-w-none px-4"
                     >
                         <a href="#contact" className="w-[calc(50%-0.5rem)] sm:w-auto order-1">
-                            <Button className="w-full rounded-full px-6 py-3 bg-foreground text-background border-2 border-foreground hover:bg-background hover:text-foreground transition-all duration-300 font-medium text-sm">
+                            <Button className="w-full rounded-full px-6 py-3 bg-foreground text-background border-zinc-200 dark:border-white/10 hover:bg-background hover:text-foreground transition-all duration-300 font-medium text-sm">
                                 Get in touch
                             </Button>
                         </a>
                         <a href="#projects" className="w-[calc(50%-0.5rem)] sm:w-auto order-2">
-                            <Button variant="outline" className="w-full rounded-full px-6 py-3 border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all duration-300 font-medium text-sm">
+                            <Button variant="outline" className="w-full rounded-full px-6 py-3 border-zinc-200 dark:border-white/10 text-foreground hover:bg-foreground hover:text-background transition-all duration-300 font-medium text-sm">
                                 See our work
                             </Button>
                         </a>
                         <a href={PERSONAL_INFO.resumeUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto order-3">
-                            <Button variant="outline" className="w-full rounded-full px-6 py-3 border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all duration-300 font-medium text-sm">
+                            <Button variant="outline" className="w-full rounded-full px-6 py-3 border-zinc-200 dark:border-white/10 text-foreground hover:bg-foreground hover:text-background transition-all duration-300 font-medium text-sm">
                                 View Resume
                             </Button>
                         </a>

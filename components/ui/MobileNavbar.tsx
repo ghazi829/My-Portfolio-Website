@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
 import { PERSONAL_INFO } from "@/lib/constants";
-import { Menu, X, Home, User, Cpu, Monitor, MessageSquare, Send, Briefcase } from "lucide-react";
+import { Menu, X, Home, User, Cpu, Monitor, MessageSquare, Send, Briefcase, GraduationCap } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -14,7 +14,7 @@ const MENU_ITEMS = [
     { name: "Experience", href: "#experience", icon: Briefcase },
     { name: "Skills", href: "#skills", icon: Cpu },
     { name: "Projects", href: "#projects", icon: Monitor },
-    { name: "Case Studies", href: "#projects", icon: Monitor },
+    { name: "Education", href: "#education", icon: GraduationCap },
     { name: "Testimonials", href: "#testimonials", icon: MessageSquare },
     { name: "Contact", href: "#contact", icon: Send },
 ];

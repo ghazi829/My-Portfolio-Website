@@ -22,7 +22,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                             variant === "primary",
                         "bg-secondary text-secondary-foreground hover:bg-secondary/80":
                             variant === "secondary",
-                        "border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground":
+                        "border border-primary text-primary hover:bg-primary hover:text-primary-foreground":
                             variant === "outline",
                         // Sizes
                         "px-4 py-2 text-sm": size === "sm",

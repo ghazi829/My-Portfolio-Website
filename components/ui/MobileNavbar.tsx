@@ -49,7 +49,7 @@ export function MobileNavbar() {
     };
 
     return (
-        <div className="fixed top-4 left-0 right-0 z-[60] flex flex-col items-center gap-1.5 px-4 sm:hidden pointer-events-none">
+        <div className="fixed top-4 left-0 right-0 z-[60] flex flex-col items-center gap-1.5 px-2 sm:hidden pointer-events-none">
             {/* Top Pill - Persistent Header */}
             <motion.div
                 layout

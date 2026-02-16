@@ -112,8 +112,8 @@ export function Hero() {
             {/* Corner Branding - Bottom Right */}
             <div className="absolute bottom-10 right-10 hidden lg:flex items-center gap-4 group text-right">
                 <div className="flex flex-col items-end">
-                    <span className="text-[10px] font-black tracking-[0.2em] text-foreground uppercase">SOFTWARE ENGINEER,</span>
-                    <span className="text-[10px] font-bold tracking-[0.2em] text-muted-foreground italic font-serif">& DESIGNER</span>
+                    <span className="text-[10px] font-black tracking-[0.2em] text-foreground uppercase">FULL STACK DEVELOPER,</span>
+                    <span className="text-[10px] font-bold tracking-[0.2em] text-muted-foreground italic font-serif">& MERN SPECIALIST</span>
                 </div>
                 <a href="https://ghazi829.github.io/Ghazi-Resume/" target="_blank" rel="noopener noreferrer">
                     <div className="p-3 rounded-xl bg-zinc-100 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/50 text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">

@@ -75,25 +75,23 @@ export function Hero() {
                         Building fast, scalable web applications with the MERN stack
                     </motion.p>
 
-                    {/* CTA Buttons */}
                     <motion.div
                         variants={item}
-                        className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                        className="flex flex-wrap gap-4 justify-center items-center w-full max-w-md sm:max-w-none px-4"
                     >
-                        <a href="#contact">
-                            <Button className="rounded-full px-10 py-6 bg-foreground text-background border-2 border-foreground hover:bg-background hover:text-foreground transition-all duration-300 font-medium text-sm">
+                        <a href="#contact" className="w-[calc(50%-0.5rem)] sm:w-auto order-1">
+                            <Button className="w-full rounded-full px-6 py-3 bg-foreground text-background border-2 border-foreground hover:bg-background hover:text-foreground transition-all duration-300 font-medium text-sm">
                                 Get in touch
                             </Button>
                         </a>
-                        <a href={PERSONAL_INFO.resumeUrl} target="_blank" rel="noopener noreferrer">
-                            <Button variant="outline" className="rounded-full px-10 py-6 border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all duration-300 font-medium text-sm">
-                                <Download className="w-4 h-4 mr-2" />
-                                View Resume
+                        <a href="#projects" className="w-[calc(50%-0.5rem)] sm:w-auto order-2">
+                            <Button variant="outline" className="w-full rounded-full px-6 py-3 border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all duration-300 font-medium text-sm">
+                                See our work
                             </Button>
                         </a>
-                        <a href="#projects">
-                            <Button variant="outline" className="rounded-full px-10 py-6 border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all duration-300 font-medium text-sm">
-                                See our work
+                        <a href={PERSONAL_INFO.resumeUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto order-3">
+                            <Button variant="outline" className="w-full rounded-full px-6 py-3 border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all duration-300 font-medium text-sm">
+                                View Resume
                             </Button>
                         </a>
                     </motion.div>

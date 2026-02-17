@@ -59,7 +59,7 @@ export function MobileNavbar() {
             >
                 {/* Left: Logo & Name */}
                 <div className="flex items-center gap-3">
-                    <div className="relative w-8 h-8 flex items-center justify-center rounded-xl bg-secondary/50 border border-border shadow-inner overflow-hidden">
+                    <div className="relative w-10 h-10 flex items-center justify-center rounded-xl bg-secondary/50 border border-border shadow-inner overflow-hidden">
                         <Image
                             src="/assets/ghazi logo.png"
                             alt="Logo"

@@ -49,7 +49,7 @@ export function Hero() {
 
                     {/* Primary Heading - Name Split */}
                     <motion.div variants={item} className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 leading-[0.85] select-none text-[12vw] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] mb-2 uppercase">
-                        <span className="font-serif italic font-extralight lowercase tracking-tight text-foreground/80 dark:text-white/90">
+                        <span className="font-serif italic font-extralight normal-case tracking-tight text-foreground/80 dark:text-white/90">
                             Pir Ghazi
                         </span>
                         <span className="font-sans font-black tracking-tighter text-foreground">

@@ -27,7 +27,7 @@ export function TopBar() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
                     {/* Left: Profile Info */}
                     <div className="flex items-center gap-3">
-                        <div className="relative w-10 h-10 rounded-full overflow-hidden border border-border">
+                        <div className="relative w-12 h-12 rounded-full overflow-hidden border border-border">
                             <img
                                 src="/assets/ghazi logo.png"
                                 alt={PERSONAL_INFO.name}

@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     keywords: ["Full Stack Developer", "MERN Stack", "React", "Node.js", "Web Developer", "Pir Ghazi Shah"],
     authors: [{ name: "Pir Ghazi Shah" }],
     creator: "Pir Ghazi Shah",
+    icons: {
+        icon: "/assets/ghazi logo.png",
+    },
     openGraph: {
         type: "website",
         locale: "en_US",

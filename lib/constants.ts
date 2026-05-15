@@ -83,10 +83,19 @@ export const PROJECTS: Project[] = [
         description: "Full-stack MERN application with online table booking, admin dashboard, and real-time operations",
         tech: ["MongoDB", "Express.js", "React", "Node.js"],
         imageUrl: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=2070",
-        status: "in-progress",
+        status: "completed",
     },
     {
         id: 2,
+        title: "PDFNinja - Professional PDF Tool Suite",
+        description: "PDFNinja is a high-performance, premium web application built with React and Vite, designed to provide a comprehensive suite of document management tools. Whether you need to convert Office files to PDF, merge multiple documents, or extract pages, PDFNinja handles it with speed, security, and precision.",
+        tech: ["React", "Tailwind CSS", "Vite", "PDF-Lib"],
+        liveUrl: "https://pdf-tool-kit-delta.vercel.app/",
+        imageUrl: "https://github.com/ghazi829/PDF-Tool-kit/raw/main/src/assets/pdf-ninja.jpg",
+        status: "completed",
+    },
+    {
+        id: 3,
         title: "Modern PDF Merger",
         description: "A sleek PDF Merger engineered for dynamic file combining. Fast, intuitive, and built for modern workflows.",
         tech: ["React", "Tailwind CSS", "Vite", "PDF-Lib"],
@@ -95,7 +104,7 @@ export const PROJECTS: Project[] = [
         status: "completed",
     },
     {
-        id: 3,
+        id: 4,
         title: "Image Compressor",
         description: "A responsive web tool that compresses images instantly in your browser — no uploads required.",
         tech: ["HTML", "CSS", "JavaScript"],
@@ -104,7 +113,7 @@ export const PROJECTS: Project[] = [
         status: "completed",
     },
     {
-        id: 4,
+        id: 5,
         title: "Dictionary App",
         description: "Instantly search word meanings, pronunciation, and examples with a clean, responsive interface.",
         tech: ["HTML", "CSS", "JavaScript", "API"],
@@ -113,7 +122,7 @@ export const PROJECTS: Project[] = [
         status: "completed",
     },
     {
-        id: 5,
+        id: 6,
         title: "Tourism Guide & Consulting",
         description: "A modern portal for Tourism expert guidance services. Features service showcases, testimonials, and a streamlined contact system.",
         tech: ["HTML", "CSS", "JavaScript"],
@@ -122,7 +131,7 @@ export const PROJECTS: Project[] = [
         status: "completed",
     },
     {
-        id: 6,
+        id: 7,
         title: "QR Code Generator",
         description: "A sleek and responsive web application that generates QR codes instantly using the GoQR API. Built with pure HTML, CSS, and JavaScript.",
         tech: ["HTML", "CSS", "JavaScript", "GoQR API"],
@@ -131,7 +140,7 @@ export const PROJECTS: Project[] = [
         status: "completed",
     },
     {
-        id: 7,
+        id: 8,
         title: "Portfolio Website",
         description: "A modern and fully responsive portfolio website built with HTML, CSS and JavaScript. This site showcases my skills, projects, and contact information with smooth navigation and an elegant user interface.",
         tech: ["HTML", "CSS", "JavaScript"],
@@ -140,7 +149,7 @@ export const PROJECTS: Project[] = [
         status: "completed",
     },
     {
-        id: 8,
+        id: 9,
         title: "Smart Calculator",
         description: "A responsive calculator that performs basic arithmetic with a clean, user-friendly interface.",
         tech: ["HTML", "CSS", "JavaScript"],
